@@ -1,0 +1,57 @@
+header {
+	@extend %header-background-color;
+	display: flex;
+	align-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 40px 15px;
+
+	.header-text{
+		width: 90%;
+		display: inherit;
+		@media  screen and (min-width: $medium) {
+			width: 50%;
+		}
+	}
+
+	@media  screen and (min-width: $medium) {
+		flex-wrap: wrap;
+		height: 768px;
+		align-items: unset;
+		text-align: unset;
+		padding: 0;
+		justify-content: space-around;
+	}
+
+	.about-me {
+		width: 90%;
+		@media  screen and (min-width: $medium) {
+			width: 50%;
+		}
+	}
+	
+	.image-portrait {
+		background-image: url(img/portrait.jpg);
+		width: 144px;
+		height: 144px;
+		border-radius: 100%;
+		background-size: 180%;
+		background-position: 50% 30%;
+		
+		@media screen and (min-width: $small) {
+			width: 384px;
+			height: 384px;
+		}
+		
+		@media screen and (min-width: $medium) {
+			order: -1;
+			height: 100%;
+			width: 40%;
+			border-radius: 0;
+			background-position: center;
+		}
+
+		
+	}
+}

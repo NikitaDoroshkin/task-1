@@ -1,0 +1,87 @@
+a {
+	@extend %link-color;
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+strong, b {
+  font-weight: _font(weight-bold);
+}
+
+em, i {
+  font-style: italic;
+}
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.8em;
+  
+	&.heading-light {
+		@media  screen and (max-width: $small) {
+			font-size: 1em;
+			line-height: 1.2em;
+		}
+	}
+
+}
+
+h1 {
+	font-size: 2em;
+	line-height: 2.5em;
+
+	@media screen and (min-width: $small) {
+		font-size: 2.5em;
+		line-height: 3em;
+	}
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @extend %text-color;
+  font-family: Helvetica;
+  font-weight: _font(weight-bold);
+  line-height: 1em;
+	&.heading-light {
+		@extend %text-color-light;
+	}
+}
+
+p {
+	@extend %text-color;
+	font-family: Georgia;
+	font-size: 1em;
+	line-height: 1.5em;
+
+	&.paragraph-light {
+		@extend %background-color;
+		@media  screen and (min-width: $small) {
+			font-size: 1.25em;
+			line-height: 1.75em;
+		}
+	}
+
+}
+
+
+
+/* georgia-regular - cyrillic_latin */
+@font-face {
+  font-family: 'Georgia';
+
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../fonts/georgia-v1-regular.woff2') format('woff2'),
+       url('../../fonts/georgia-v1-regular.woff') format('woff');
+}
+
+/* helvetica-bold - cyrillic_latin */
+@font-face {
+  font-family: 'Helvetica';
+
+  font-style: normal;
+  font-weight: normal;
+  src: url('../../fonts/helveticaneue-v1-bold.woff2') format('woff2'),
+       url('../../fonts/helveticaneue-v1-bold.woff') format('woff');
+}

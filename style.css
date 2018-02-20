@@ -1,0 +1,130 @@
+body {
+  margin: 0; }
+
+a {
+  text-decoration: underline; }
+  a:hover {
+    text-decoration: none; }
+
+strong, b {
+  font-weight: _font(weight-bold); }
+
+em, i {
+  font-style: italic; }
+
+h2 {
+  font-size: 1.5em;
+  line-height: 1.8em; }
+  @media screen and (max-width: 768px) {
+    h2.heading-light {
+      font-size: 1em;
+      line-height: 1.2em; } }
+
+h1 {
+  font-size: 2em;
+  line-height: 2.5em; }
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 2.5em;
+      line-height: 3em; } }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: Helvetica;
+  font-weight: _font(weight-bold);
+  line-height: 1em; }
+
+p {
+  font-family: Georgia;
+  font-size: 1em;
+  line-height: 1.5em; }
+  @media screen and (min-width: 768px) {
+    p.paragraph-light {
+      font-size: 1.25em;
+      line-height: 1.75em; } }
+
+/* georgia-regular - cyrillic_latin */
+@font-face {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/georgia-v1-regular.woff2") format("woff2"), url("../../fonts/georgia-v1-regular.woff") format("woff"); }
+
+/* helvetica-bold - cyrillic_latin */
+@font-face {
+  font-family: 'Helvetica';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../../fonts/helveticaneue-v1-bold.woff2") format("woff2"), url("../../fonts/helveticaneue-v1-bold.woff") format("woff"); }
+
+body, p.paragraph-light {
+  color: white; }
+
+a {
+  color: #dd3e18; }
+
+h1, h2, h3, h4, h5, h6, p {
+  color: black; }
+
+h1.heading-light, h2.heading-light, h3.heading-light, h4.heading-light, h5.heading-light, h6.heading-light {
+  color: white; }
+
+header {
+  background-color: #07273f; }
+
+img {
+  width: 100%;
+  height: 100%; }
+  @media screen and (min-width: 1024px) {
+    img {
+      height: 320px;
+      width: auto; } }
+
+.section {
+  display: flex;
+  align-content: space-between;
+  justify-content: center; }
+
+header {
+  display: flex;
+  align-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 40px 15px; }
+  header .header-text {
+    width: 90%;
+    display: inherit; }
+    @media screen and (min-width: 1024px) {
+      header .header-text {
+        width: 50%; } }
+  @media screen and (min-width: 1024px) {
+    header {
+      flex-wrap: wrap;
+      height: 768px;
+      align-items: unset;
+      text-align: unset;
+      padding: 0;
+      justify-content: space-around; } }
+  header .about-me {
+    width: 90%; }
+    @media screen and (min-width: 1024px) {
+      header .about-me {
+        width: 50%; } }
+  header .image-portrait {
+    background-image: url(img/portrait.jpg);
+    width: 144px;
+    height: 144px;
+    border-radius: 100%;
+    background-size: 180%;
+    background-position: 50% 30%; }
+    @media screen and (min-width: 768px) {
+      header .image-portrait {
+        width: 384px;
+        height: 384px; } }
+    @media screen and (min-width: 1024px) {
+      header .image-portrait {
+        order: -1;
+        height: 100%;
+        width: 40%;
+        border-radius: 0;
+        background-position: center; } }
